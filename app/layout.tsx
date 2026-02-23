@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,10 +20,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${inter.variable} font-sans antialiased bg-white`}>
+        {/* Purple Glow Background */}
+        <div className="fixed inset-0 -z-10 pointer-events-none">
+          <div
+            className="absolute inset-0"
+            style={{
+              background: "#ffffff",
+              backgroundImage: ` radial-gradient( circle at top left, rgba(173, 109, 244, 0.5), transparent 70% ) `,
+              filter: "blur(80px)",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
+        </div>
+        {/* Page Content */}
+        <div>{children}</div>
       </body>
     </html>
   );
