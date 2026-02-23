@@ -10,6 +10,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Jobkech",
+  icons: {
+    icon: "/logo.png",
+  },
   description: "",
 };
 
