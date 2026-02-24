@@ -1,6 +1,9 @@
+import Navbar from "./components/Navbar/Navbar";
 
 export default function Home() {
   return (
-    <div>Jobkech home</div>
+    <div>
+      <Navbar />
+    </div>
   );
 }
