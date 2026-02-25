@@ -1,9 +1,10 @@
 "use client"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Logo() {
   return (
-    <div className="flex items-center">
+    <Link href={"/"}><div className="flex items-center">
       <Image
         src="/logo.png"
         alt="Logo"
@@ -11,6 +12,7 @@ export default function Logo() {
         height={40}
         priority
       />
-    </div>
+      <h1 className="inter text-2xl ml-1 font-semibold">Jobkech</h1>
+    </div></Link>
   )
 }

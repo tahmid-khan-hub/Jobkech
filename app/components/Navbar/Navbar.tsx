@@ -10,7 +10,7 @@ export default function Navbar() {
         <Logo />
 
         {/* Right side - desktop links */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-6 mr-1">
           <NavLinks />
         </div>
       </div>
