@@ -1,6 +1,7 @@
 "use client";
 import Logo from "@/components/Logo/Logo";
 import NavLinks from "./components/NavLinks";
+import MobileMenu from "./components/MobileMenu";
 
 export default function Navbar() {
   return (
@@ -13,6 +14,9 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-6 mr-1">
           <NavLinks />
         </div>
+
+        {/* Mobile Menu */}
+        <MobileMenu />
       </div>
     </div>
   );
